@@ -1,5 +1,12 @@
-<h1>Hola</h1>
-<% Post.all.each do |post| %>
-  <%= post.content %>
-  <%= post.user.username %>
-<% end %>
+<div class="full__site__content">
+  <div class="profile__box"></div>
+  <div class="post__box"></div>
+  <div class="top__posts"></div>
+  <div class="top__users"></div>
+  <div class="most__popular__post"></div>
+  <% Post.all.each do |post| %>
+    <%= post.content %>
+    <%= post.user.username %>
+    <%= post.karma %>
+  <% end %>
+</div>
