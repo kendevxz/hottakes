@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <%= link_to "/" do %>
-    <span class="forum__logo__text">HOTTAKES</span>
+    <span class="logo__text">HOTTAKES</span>
     <% end %>
     <% if user_signed_in? %>
-    <%= link_to "#", class: "profile__button", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
+    <%= link_to "#", class: "user__bar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
       <% if current_user.photo.attached? %>
-        <%= cl_image_tag current_user.photo.key, class: "profile__avatar" %>
+        <%= cl_image_tag current_user.photo.key, class: "user__avatar" %>
       <% else %>
-        <%= image_tag "https://mcdn.wallpapersafari.com/medium/92/63/wUq2AY.jpg", class: "profile__avatar" %>
+        <%= image_tag "https://mcdn.wallpapersafari.com/medium/92/63/wUq2AY.jpg", class: "user__avatar" %>
       <% end %>
-      <span class="profile__text"><%= current_user.username %></span>
+      <span class="user__text"><%= current_user.username %></span>
     <% end %>
     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
       <a class="dropdown-item" href="#">Profile</a>
@@ -19,7 +19,7 @@
       <a class="dropdown-item" href="#">Log Out</a>
     </div>
     <% else %>
-      <%= link_to "Login", new_user_session_path, class: "btn button__login nav__item" %>
+      <%= link_to "Login", new_user_session_path, class: "btn" %>
     <% end %>
   </div>
 </nav>

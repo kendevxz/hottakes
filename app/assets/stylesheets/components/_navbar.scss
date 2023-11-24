@@ -1,25 +1,26 @@
-.forum__logo__text{
+.logo__text{
   display: flex;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 36px;
+  font-family: 'Jockey One', sans-serif;
+  font-size: 46px;
   height: 50px;
   letter-spacing: 1px;
   font-weight: 600;
   margin-left: 12px;
+  text-decoration: none;
 }
 
-.profile__button{
+.user__bar{
   width: 140px;
-  height: 30px;
+  height: 54px;
   display: flex;
   align-items: center;
-  border: 2px solid;
-  border-radius: 25px;
+  border: 3px solid;
+  border-radius: 10px;
   margin: 0 6px;
 }
 
-.profile__avatar{
+.user__avatar{
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -27,11 +28,7 @@
   object-fit: cover;
 }
 
-.profile__text{
-  margin: 0 6px;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  width: 90px;
-  overflow: hidden;
+.user__text{
+  font-family: 'Jockey One', sans-serif;
+  text-decoration: none;
 }
