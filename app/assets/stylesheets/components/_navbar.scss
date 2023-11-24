@@ -1,78 +1,26 @@
-.navigation__bar {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  align-items: center;
-  position: sticky;
-  height: 50px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  border-bottom: 1px solid;
-}
-
-.forum__logo__text{
+.logo__text{
   display: flex;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 36px;
+  font-family: 'Jockey One', sans-serif;
+  font-size: 46px;
   height: 50px;
   letter-spacing: 1px;
   font-weight: 600;
   margin-left: 12px;
+  text-decoration: none;
 }
 
-.navigation__bar__left{
-  display: flex;
-  align-items: center;
-  left: 0;
-  height: 50px;
-}
-
-.navigation__bar__right{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: 10px;
-}
-
-.navbar-form{
-  width: 550px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-}
-
-.search__icon{
-  position: relative;
-  float: right;
-  right: 24px;
-  color: #CCC;
-}
-
-.nav__item{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 6px;
-  width: 30px;
-}
-
-.nav__icon{
-  font-size: 24px;
-}
-
-.profile__button{
+.user__bar{
   width: 140px;
-  height: 30px;
+  height: 54px;
   display: flex;
   align-items: center;
-  border: 2px solid;
-  border-radius: 25px;
+  border: 3px solid;
+  border-radius: 10px;
   margin: 0 6px;
 }
 
-.profile__avatar{
+.user__avatar{
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -80,100 +28,7 @@
   object-fit: cover;
 }
 
-.profile__text{
-  margin: 0 6px;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  width: 90px;
-  overflow: hidden;
-}
-
-.profile__online__status{
-  color: rgb(5,183,20);
-  margin-right: 4px;
-}
-
-.search__bar__placeholder{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.button__login{
-  width: 100px;
-  display: flex;
-  align-items: center;
-  border: 2px #CBCBCB solid;
-  border-radius: 25px;
-  margin: 0 6px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px;
-}
-
-.button__login:hover{
-  width: 100px;
-  display: flex;
-  align-items: center;
-  border: 2px #CBCBCB solid;
-  border-radius: 25px;
-  margin: 0 6px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px;
-}
-
-.login__buttons{
-  display: flex;
-  align-items: center;
-}
-
-.dropdown__label{
-  height: 32px;
-  padding-left: 15px;
-  margin: 8px 0;
-}
-
-.dropdown__list{
-  display: flex;
-  align-items: center;
-  height: 32px;
-  padding-left: 25px;
-}
-
-.dropdown-menu.show{
-  position: absolute;
-  margin-top: 84px
-}
-
-.navbar__login{
-  padding: 5px 15px 15px 15px;
-}
-
-.navbar__login__item{
-  margin: 10px 0;
-}
-
-.navbar__login__session{
-  margin: 2.5px 0;
-}
-
-.navbar__login .navbar-form{
-  display: flex;
-  flex-direction: column;
-}
-
-.navbar__login .form-control{
-  width: 200px;
-}
-
-.login__remember__me{
-  display: flex;
+.user__text{
+  font-family: 'Jockey One', sans-serif;
+  text-decoration: none;
 }

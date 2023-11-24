@@ -1,41 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <%= link_to "/", class:"navigation__bar__left" do %>
-    <span class="forum__logo__text">HOTTAKES</span>
-  <% end %>
-  <div class="navigation__bar__right">
-    <% if user_signed_in? %>
-      <%= link_to "#", class: "nav__item nav__icon", data: { bs_toggle: "collapse" }, href:"#collapsePost", role:"button", 'aria-expanded':"false", 'aria-controls':"collapsePost" do %>
-        <i class="fa-solid fa-circle-plus"></i>
-      <% end %>
-      <%= link_to "#", class: "nav__item nav__icon", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
-        <i class="fa-solid fa-envelope"></i>
-      <% end %>
-      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-        <%= link_to "Notification", "/sales", class: "dropdown-item" %>
-        <%= link_to "Message", "/purchases", class: "dropdown-item" %>
-      </div>
-       <%= link_to "#", class: "nav__item nav__icon", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
-        <i class="fa-solid fa-bell"></i>
-      <% end %>
-    <%= link_to "#", class: "profile__button", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
-      <% if current_user.photo.attached? %>
-        <%= cl_image_tag current_user.photo.key, class: "profile__avatar" %>
-      <% else %>
-        <%= image_tag "https://mcdn.wallpapersafari.com/medium/92/63/wUq2AY.jpg", class: "profile__avatar" %>
-      <% end %>
-      <span class="profile__text"><%= current_user.username %></span>
-      <i class="fa-solid fa-circle profile__online__status"></i>
+    <%= link_to "/" do %>
+    <span class="logo__text">HOTTAKES</span>
     <% end %>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
+    <% if user_signed_in? %>
+    <%= link_to "#", class: "user__bar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
+      <% if current_user.photo.attached? %>
+        <%= cl_image_tag current_user.photo.key, class: "user__avatar" %>
+      <% else %>
+        <%= image_tag "https://mcdn.wallpapersafari.com/medium/92/63/wUq2AY.jpg", class: "user__avatar" %>
+      <% end %>
+      <span class="user__text"><%= current_user.username %></span>
+    <% end %>
+    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="#">Profile</a>
+      <a class="dropdown-item" href="#">Notification</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Log Out</a>
     </div>
     <% else %>
-      <%= link_to "Login", new_user_session_path, class: "btn button__login nav__item" %>
+      <%= link_to "Login", new_user_session_path, class: "btn" %>
     <% end %>
-  </div>
   </div>
 </nav>
