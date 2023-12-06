@@ -1,5 +1,8 @@
 <div class="full__site__content">
-  <div class="profile__box"></div>
+  <div class="profile__box">
+  <%= current_user.username %>
+  <%= current_user.posts.count %>
+  </div>
   <div class="post__box"></div>
   <div class="top__posts"></div>
   <div class="top__users"></div>
